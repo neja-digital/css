@@ -1,0 +1,19 @@
+.nj-input {
+  outline: none;
+  border: none;
+  border-radius: 0;
+  padding: var(--spacer-xs) var(--spacer-md);
+  font-size: var(--text-md);
+
+  &.variant-solid {
+    background-color: var(--input-color);
+    color: color-mix(in srgb, var(--input-color) 15%, white 100%);
+    border-color: color-mix(in srgb, var(--input-color) 15%, white 100%);
+  }
+
+  &.variant-light {
+    background-color: color-mix(in srgb, var(--input-color) 25%, white 100%);
+    color: var(--input-color);
+    border-color: var(--input-color);
+  }
+}

@@ -1,0 +1,18 @@
+.nj-button {
+  border: none;
+  border-radius: 0;
+  padding: var(--spacer-sm) var(--spacer-lg);
+  font-size: var(--text-md);
+
+  &.variant-solid {
+    background-color: var(--button-color);
+    color: color-mix(in srgb, var(--button-color) 15%, white 100%);
+    border-color: color-mix(in srgb, var(--button-color) 15%, white 100%);
+  }
+
+  &.variant-light {
+    background-color: color-mix(in srgb, var(--button-color) 25%, white 100%);
+    color: var(--button-color);
+    border-color: var(--button-color);
+  }
+}

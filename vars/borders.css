@@ -1,0 +1,11 @@
+:root {
+  --border-thin: 1px;
+  --border-medium: 2px;
+  --border-thick: 4px;
+
+  --border-radius-tight: 4px;
+  --border-radius-medium: 8px;
+  --border-radius-large: 16px;
+  --border-radius-pill: 100vh;
+  --border-radius-circle: 50%;
+}

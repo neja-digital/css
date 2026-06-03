@@ -1,0 +1,35 @@
+.nj-textarea {
+  outline: none;
+  border: none;
+  border-radius: 0;
+  padding: var(--spacer-xs) var(--spacer-md);
+  font-size: var(--text-md);
+
+  &.variant-solid {
+    background-color: var(--textarea-color);
+    color: color-mix(in srgb, var(--textarea-color) 15%, white 100%);
+    border-color: color-mix(in srgb, var(--textarea-color) 15%, white 100%);
+  }
+
+  &.variant-light {
+    background-color: color-mix(in srgb, var(--textarea-color) 25%, white 100%);
+    color: var(--textarea-color);
+    border-color: var(--textarea-color);
+  }
+
+  &.resize-none {
+    resize: none;
+  }
+
+  &.resize-horizontal {
+    resize: horizontal;
+  }
+
+  &.resize-vertical {
+    resize: vertical;
+  }
+
+  &.resize-both {
+    resize: both;
+  }
+}

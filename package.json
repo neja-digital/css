@@ -1,0 +1,8 @@
+{
+  "name": "@neja-digital/css",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "./index.css",
+  "style": "./index.css",
+  "files": ["./index.css"]
+}

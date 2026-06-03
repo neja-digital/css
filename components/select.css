@@ -1,0 +1,19 @@
+.nj-select {
+  border: none;
+  border-radius: 0;
+  padding: var(--spacer-xs) var(--spacer-md);
+  font-size: var(--text-md);
+  cursor: pointer;
+
+  &.variant-solid {
+    background-color: var(--select-color);
+    color: color-mix(in srgb, var(--select-color) 15%, white 100%);
+    border-color: color-mix(in srgb, var(--select-color) 15%, white 100%);
+  }
+
+  &.variant-light {
+    background-color: color-mix(in srgb, var(--select-color) 25%, white 100%);
+    color: var(--select-color);
+    border-color: var(--select-color);
+  }
+}
