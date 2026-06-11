@@ -1,4 +1,4 @@
-.hero {
+.nj-hero {
   position: relative;
   min-height: 100vh;
   background-image: var(--mobileBg);
@@ -37,7 +37,7 @@
   }
 }
 
-.hero__overlay {
+.nj-hero__overlay {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -55,7 +55,7 @@
   }
 }
 
-.hero__content {
+.nj-hero__content {
   z-index: 1;
   backdrop-filter: var(--content-blur);
   padding: var(--spacer-md);
@@ -69,15 +69,15 @@
   }
 }
 
-.hero__headline {
+.nj-hero__headline {
   margin-top: 0;
   font-size: var(--text-3xl);
 }
 
-.hero__subheadline {
+.nj-hero__subheadline {
   font-size: var(--text-xl);
 }
 
-.hero__supporting {
+.nj-hero__supporting {
   font-size: var(--text-md);
 }
