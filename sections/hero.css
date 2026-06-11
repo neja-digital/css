@@ -7,16 +7,16 @@
   background-repeat: no-repeat;
   padding: 0 var(--spacer-md);
 
-  @media (min-width: var(--tablet)) {
+  @media (min-width: 600px /* var(--tablet) */) {
     background-image: var(--tabletBg);
     padding: 0 var(--spacer-xl);
   }
 
-  @media (min-width: var(--tablet)) and (orientation: landscape) {
+  @media (min-width: 600px /* var(--tablet) */) and (orientation: landscape) {
     background-image: var(--tabletHBg);
   }
 
-  @media (min-width: var(--desktop)) {
+  @media (min-width: 1024px /* var(--desktop) */) {
     background-image: var(--desktopBg);
     padding: 0 var(--spacer-3xl);
   }
