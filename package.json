@@ -1,6 +1,9 @@
 {
   "name": "@neja-digital/css",
   "version": "0.0.2",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "type": "module",
   "main": "./index.css",
   "style": "./index.css"
