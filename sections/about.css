@@ -1,0 +1,40 @@
+.nj-about {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacer-lg);
+  align-items: center;
+
+  @media (min-width: 768px /* var(--small-laptop) */) {
+    flex-wrap: nowrap;
+    gap: var(--spacer-3xl);
+  }
+
+  &.image-left {
+    flex-direction: row-reverse;
+  }
+
+  &.image-right {
+    flex-direction: row;
+  }
+}
+
+.nj-about__title {
+  font-size: var(--text-3xl);
+}
+
+.nj-about__description {
+  font-size: var(--text-md);
+}
+
+.nj-about__image {
+  margin: 0 auto;
+
+  img {
+    width: 100%;
+    border-radius: var(--border-radius-medium);
+
+    @media (min-width: 768px /* var(--small-laptop) */) {
+      width: 320px;
+    }
+  }
+}
