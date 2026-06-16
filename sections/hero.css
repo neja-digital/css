@@ -59,6 +59,7 @@
   z-index: 1;
   backdrop-filter: var(--content-blur);
   padding: var(--spacer-md);
+  border-radius: var(--border-radius-medium);
 
   @media (min-width: 600px) {
     padding: var(--spacer-xl);
@@ -66,6 +67,17 @@
 
   @media (min-width: 1024px) {
     padding: var(--spacer-3xl);
+  }
+
+  .nj-hero__supporting {
+    font-style: italic;
+    text-align: right;
+  }
+
+  .nj-hero__cta-buttons {
+    display: flex;
+    gap: var(--spacer-xs);
+    justify-content: right;
   }
 }
 
