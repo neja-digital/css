@@ -104,3 +104,19 @@
   border-style: solid;
   border-width: var(--border-thick);
 }
+
+.raised-lightly {
+  box-shadow: var(--box-shadow-tight);
+}
+
+.raised-medium {
+  box-shadow: var(--box-shadow-medium);
+}
+
+.raised-highly {
+  box-shadow: var(--box-shadow-large);
+}
+
+.raised-emphasized {
+  box-shadow: var(--box-shadow-emphasized);
+}

@@ -9,11 +9,19 @@
     background-color: var(--button-color);
     color: color-mix(in srgb, var(--button-color) 15%, white 100%);
     border-color: color-mix(in srgb, var(--button-color) 15%, white 100%);
+
+    &-raised {
+
+    }
   }
 
   &.variant-light {
     background-color: color-mix(in srgb, var(--button-color) 25%, white 100%);
     color: var(--button-color);
     border-color: var(--button-color);
+
+    &-raised {
+      
+    }
   }
 }
