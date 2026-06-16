@@ -1,0 +1,23 @@
+.nj-card {
+  min-width: 240px;
+  max-width: 420px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.nj-card__image {
+  width: 100%;
+}
+
+.nj-card__content {
+  padding: 0 var(--spacer-md) var(--spacer-md);
+}
+
+.nj-card__title {
+  margin: 0 0 var(--spacer-md);
+  font-size: var(--text-2xl);
+}
+
+.nj-card__text {
+  line-height: 1.5em;
+}
