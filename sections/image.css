@@ -18,15 +18,15 @@
   }
 }
 
-.nj-split-section__title {
+.nj-image-section__title {
   font-size: var(--text-3xl);
 }
 
-.nj-split-section__description {
+.nj-image-section__description {
   font-size: var(--text-md);
 }
 
-.nj-split-section__image {
+.nj-image-section__image {
   margin: 0 auto;
 
   img {
