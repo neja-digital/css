@@ -23,7 +23,7 @@
   margin-top: var(--spacer-xl);
   text-align: center;
 
-  @media (min-width: 600px /* var(--tablet) */) {
+  @media (min-width: 768px /* var(--small-laptop) */) {
     margin-top: var(--spacer-3xl);
   }
 }

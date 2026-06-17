@@ -4,6 +4,41 @@
   text-align: center;
   overflow: hidden;
   background-color: var(--card-color);
+
+  &.rounded-circle {
+    padding: 0;
+  }
+
+  &.size-compact,
+  &.size-regular,
+  &.size-large,
+  &.size-xlarge {
+    padding: 0;
+  }
+
+  &.size-compact {
+    .nj-card__content {
+      padding: var(--spacer-xs) var(--spacer-md);
+    }
+  }
+
+  &.size-regular {
+    .nj-card__content {
+      padding: var(--spacer-sm) var(--spacer-lg);
+    }
+  }
+
+  &.size-large {
+    .nj-card__content {
+      padding: var(--spacer-md) var(--spacer-xl);
+    }
+  }
+
+  &.size-xlarge {
+    .nj-card__content {
+      padding: var(--spacer-lg) var(--spacer-2xl);
+    }
+  }
 }
 
 .nj-card__image {
