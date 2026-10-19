@@ -1,0 +1,4 @@
+.nj-navbar {
+  padding: var(--spacer-md) var(--spacer-lg);
+  font-size: var(--text-md);
+}
