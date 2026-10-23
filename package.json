@@ -6,5 +6,18 @@
   },
   "type": "module",
   "main": "./index.css",
+  "files": [
+    "components",
+    "sections",
+    "vars",
+    "index.css"
+  ],
+  "exports": {
+    ".": {
+      "style": "./index.css",
+      "default": "./index.css"
+    },
+    "./*": "./*"
+  },
   "style": "./index.css"
 }
