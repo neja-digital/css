@@ -15,13 +15,13 @@
 
     @media (min-width: 768px /* var(--small-laptop) */) {
       flex-wrap: nowrap;
-      flex-direction: row-reverse
+      flex-direction: row-reverse;
     }
   }
 }
 
 .nj-text-section__second {
- .nj-text-section__cta-buttons {
+  .nj-text-section__cta-buttons {
     margin-top: var(--spacer-xl);
   }
 }

@@ -1,6 +1,9 @@
 .nj-hero {
   position: relative;
+  display: flex;
+  align-items: center;
   min-height: 100vh;
+  min-height: 100svh;
   background-image: var(--mobileBg);
   background-size: cover;
   background-position: center;
@@ -20,9 +23,6 @@
     background-image: var(--desktopBg);
     padding: 0 var(--spacer-3xl);
   }
-
-  display: flex;
-  align-items: center;
 
   &.position-center {
     justify-content: center;
