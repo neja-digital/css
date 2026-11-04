@@ -1,4 +1,160 @@
+/*
+ * Navbar
+ *
+ * Customize with CSS variables on .nj-navbar (or any parent):
+ *   --navbar-color                 background of the solid/light variants (set by njColor)
+ *   --navbar-on-color              text color on the solid variant (default: white)
+ *   --navbar-link-color            link color (default: inherit)
+ *   --navbar-link-hover-color      link color on hover/focus (default: --navbar-link-color)
+ *   --navbar-gap                   space between the navbar parts and between links
+ *   --navbar-focus-color           focus ring color (default: currentColor)
+ *   --navbar-menu-background       background of the mobile dropdown
+ *
+ * The inner parts use :where() so their specificity is 0 and any consumer rule overrides them.
+ */
 .nj-navbar {
+  --navbar-gap: var(--spacer-lg);
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--navbar-gap);
   padding: var(--spacer-md) var(--spacer-lg);
   font-size: var(--text-md);
+
+  &.nj-navbar--sticky {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  &.variant-solid {
+    background-color: var(--navbar-color, transparent);
+    color: var(--navbar-on-color, white);
+  }
+
+  &.variant-light {
+    background-color: color-mix(in srgb, var(--navbar-color, transparent) 25%, white 100%);
+    color: var(--navbar-color, inherit);
+  }
+}
+
+:where(.nj-navbar) {
+  .nj-navbar__brand {
+    color: inherit;
+    font-weight: 700;
+    font-size: 1.25em;
+    text-decoration: none;
+  }
+
+  .nj-navbar__menu {
+    display: none;
+    flex-direction: column;
+    gap: var(--navbar-gap);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: var(--spacer-md) var(--spacer-lg);
+    background-color: var(--navbar-menu-background, var(--background, white));
+    color: var(--navbar-link-color, inherit);
+
+    &[data-open='true'] {
+      display: flex;
+    }
+  }
+
+  .nj-navbar__links {
+    display: flex;
+    flex-direction: column;
+    gap: var(--navbar-gap);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .nj-navbar__link {
+    color: var(--navbar-link-color, inherit);
+    text-decoration: none;
+    transition: color 0.15s ease, opacity 0.15s ease;
+
+    &:hover,
+    &:focus-visible {
+      color: var(--navbar-link-hover-color, var(--navbar-link-color, inherit));
+      text-decoration: underline;
+      text-underline-offset: 0.25em;
+    }
+
+    &[aria-current='page'] {
+      font-weight: 700;
+      text-decoration: underline;
+      text-underline-offset: 0.25em;
+    }
+  }
+
+  .nj-navbar__toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacer-2xs);
+    margin-left: auto;
+    border: none;
+    border-radius: var(--border-radius-tight, 0);
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+  }
+
+  .nj-navbar__brand,
+  .nj-navbar__link,
+  .nj-navbar__toggle {
+    &:focus-visible {
+      outline: 2px solid var(--navbar-focus-color, currentColor);
+      outline-offset: 2px;
+    }
+  }
+}
+
+@media (min-width: 768px /* var(--small-laptop) */) {
+  :where(.nj-navbar) {
+    .nj-navbar__toggle {
+      display: none;
+    }
+
+    /* Always visible on desktop, whatever the open state is */
+    .nj-navbar__menu {
+      display: flex;
+      flex: 1;
+      flex-direction: row;
+      align-items: center;
+      position: static;
+      padding: 0;
+      background: transparent;
+      color: inherit;
+    }
+
+    .nj-navbar__menu--start {
+      justify-content: flex-start;
+    }
+
+    .nj-navbar__menu--center {
+      justify-content: center;
+    }
+
+    .nj-navbar__menu--end {
+      justify-content: flex-end;
+    }
+
+    .nj-navbar__links {
+      flex-direction: row;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :where(.nj-navbar) .nj-navbar__link {
+    transition: none;
+  }
 }
