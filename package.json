@@ -1,12 +1,14 @@
 {
   "name": "@neja-digital/css",
   "version": "0.6.0",
+  "packageManager": "pnpm@10.32.1",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },
   "type": "module",
-  "main": "./index.css",
+  "main": "./dist/index.css",
   "files": [
+    "dist",
     "components",
     "sections",
     "vars",
@@ -14,10 +16,18 @@
   ],
   "exports": {
     ".": {
-      "style": "./index.css",
-      "default": "./index.css"
+      "style": "./dist/index.css",
+      "default": "./dist/index.css"
     },
+    "./index.css": "./dist/index.css",
     "./*": "./*"
   },
-  "style": "./index.css"
+  "style": "./dist/index.css",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "prepublishOnly": "pnpm build"
+  },
+  "devDependencies": {
+    "lightningcss": "^1.33.0"
+  }
 }
