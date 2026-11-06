@@ -35,7 +35,7 @@
     border-radius: var(--border-radius-medium);
 
     @media (--small-laptop) {
-      width: 320px;
+      width: 20rem;
     }
   }
 }

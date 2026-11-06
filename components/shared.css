@@ -123,3 +123,15 @@
     border-color: var(--control-color);
   }
 }
+
+/*
+ * Reduced motion: for people who set "reduce motion" in their OS, every library element drops its transitions and
+ * animations. Any component added later is covered without extra work. Specificity is 0 (:where) but !important wins.
+ */
+@media (prefers-reduced-motion: reduce) {
+  :where([class^='nj-'], [class*=' nj-']) {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

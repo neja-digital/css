@@ -1,11 +1,12 @@
+/* Border widths stay in px (hairlines should not scale); radii are rem so they follow the text size */
 :root {
   --border-thin: 1px;
   --border-medium: 2px;
   --border-thick: 4px;
 
-  --border-radius-tight: 4px;
-  --border-radius-medium: 8px;
-  --border-radius-large: 16px;
+  --border-radius-tight: 0.25rem;
+  --border-radius-medium: 0.5rem;
+  --border-radius-large: 1rem;
   --border-radius-pill: 100vh;
   --border-radius-circle: 50%;
 }

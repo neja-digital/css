@@ -154,9 +154,3 @@
     }
   }
 }
-
-@media (prefers-reduced-motion: reduce) {
-  :where(.nj-navbar) .nj-navbar__link {
-    transition: none;
-  }
-}

@@ -1,6 +1,6 @@
 .nj-card {
-  min-width: 240px;
-  max-width: 420px;
+  min-width: 15rem;
+  max-width: 26.25rem;
   text-align: center;
   overflow: hidden;
   background-color: var(--card-color, var(--surface));
