@@ -1,10 +1,15 @@
 /*
  * Colour tokens
  *
- * A theme is just a set of these variables. The block below is the light baseline; it applies to the whole page
- * and to any subtree marked data-theme="light". Define more themes the same way, in the library or in a client's own
- * CSS, by overriding any of the tokens under a [data-theme="name"] selector, then switch with the data-theme
- * attribute on <html> or on any wrapper element. Tokens a theme leaves out keep the baseline value.
+ * A theme is just a set of these variables. The first block is the light baseline; it applies to the whole page
+ * and to any subtree marked data-theme="light". Built in themes, chosen with the data-theme attribute on <html> or on
+ * any wrapper element:
+ *   data-theme="light"   the baseline (also the default when there is no attribute)
+ *   data-theme="dark"    the dark theme
+ *   data-theme="auto"    follows the visitor's OS setting (prefers-color-scheme): light or dark
+ * Define more themes the same way, in the library or in a client's own CSS, by overriding any of the tokens under a
+ * [data-theme="name"] selector. Tokens a theme leaves out keep the baseline value. Copy the dark block as a starting
+ * point; there are no required tokens beyond the list below.
  *
  * Surfaces and text
  *   --background        page background
@@ -14,6 +19,7 @@
  *   --text-muted        secondary text; must stay readable on all three surfaces
  *   --border-color      dividers and control borders
  *   --focus-ring        keyboard focus outline
+ *   --shadow-rgb        space-separated r g b of the shadow colour (e.g. "16 24 40"); dark themes use "0 0 0"
  *
  * Brand and status fills. Each has an --on-* partner: the text/icon colour used on top of the fill.
  *   --primary / --on-primary   --secondary / --on-secondary   --accent / --on-accent
@@ -30,6 +36,7 @@
   --text-muted: #5b6270;
   --border-color: #d5d9e0;
   --focus-ring: #2563eb;
+  --shadow-rgb: 16 24 40;
 
   --primary: #2563eb;
   --on-primary: #ffffff;
@@ -44,6 +51,63 @@
   --on-warning: #1a1d23;
   --danger: #b91c1c;
   --on-danger: #ffffff;
+}
+
+[data-theme='dark'] {
+  color-scheme: dark;
+
+  --background: #121417;
+  --surface: #1b1f24;
+  --surface-raised: #252a31;
+  --text: #e8eaed;
+  --text-muted: #a3aab5;
+  --border-color: #363c45;
+  --focus-ring: #7aa7ff;
+  --shadow-rgb: 0 0 0;
+
+  --primary: #7aa7ff;
+  --on-primary: #0b1220;
+  --secondary: #94a3b8;
+  --on-secondary: #0f172a;
+  --accent: #f59e0b;
+  --on-accent: #1a1000;
+
+  --success: #4ade80;
+  --on-success: #052e16;
+  --warning: #facc15;
+  --on-warning: #1a1d23;
+  --danger: #f87171;
+  --on-danger: #2a0a0a;
+}
+
+/* Same values as the dark block above (CSS cannot share one block between a selector and a media query: keep in sync) */
+@media (prefers-color-scheme: dark) {
+  [data-theme='auto'] {
+    color-scheme: dark;
+
+    --background: #121417;
+    --surface: #1b1f24;
+    --surface-raised: #252a31;
+    --text: #e8eaed;
+    --text-muted: #a3aab5;
+    --border-color: #363c45;
+    --focus-ring: #7aa7ff;
+    --shadow-rgb: 0 0 0;
+
+    --primary: #7aa7ff;
+    --on-primary: #0b1220;
+    --secondary: #94a3b8;
+    --on-secondary: #0f172a;
+    --accent: #f59e0b;
+    --on-accent: #1a1000;
+
+    --success: #4ade80;
+    --on-success: #052e16;
+    --warning: #facc15;
+    --on-warning: #1a1d23;
+    --danger: #f87171;
+    --on-danger: #2a0a0a;
+  }
 }
 
 /* Opt-in themed region: paints the theme's background and text. The whole page can be one (data-theme on <html>). */

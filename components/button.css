@@ -1,5 +1,6 @@
 .nj-button {
   --control-color: var(--button-color, var(--primary));
+  --control-on-color: var(--button-on-color);
   border: none;
   border-radius: 0;
   padding: var(--spacer-sm) var(--spacer-lg);

@@ -113,12 +113,12 @@
   /* color-mix() has no @supports fallback on purpose: the browser baseline (see scripts/build.mjs) all support it. */
   &.variant-solid {
     background-color: var(--control-color);
-    color: color-mix(in srgb, var(--control-color) 15%, white 100%);
-    border-color: color-mix(in srgb, var(--control-color) 15%, white 100%);
+    color: var(--control-on-color, var(--on-primary));
+    border-color: var(--control-on-color, var(--on-primary));
   }
 
   &.variant-light {
-    background-color: color-mix(in srgb, var(--control-color) 25%, white 100%);
+    background-color: color-mix(in srgb, var(--control-color) 25%, var(--background) 100%);
     color: var(--control-color);
     border-color: var(--control-color);
   }

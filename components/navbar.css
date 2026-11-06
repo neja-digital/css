@@ -35,7 +35,7 @@
   }
 
   &.variant-light {
-    background-color: color-mix(in srgb, var(--navbar-color, var(--primary)) 25%, white 100%);
+    background-color: color-mix(in srgb, var(--navbar-color, var(--primary)) 25%, var(--background) 100%);
     color: var(--navbar-color, var(--primary));
   }
 }
