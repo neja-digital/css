@@ -39,3 +39,8 @@
     }
   }
 }
+
+.nj-image-section__text {
+  flex: 1;
+  min-width: 0;
+}

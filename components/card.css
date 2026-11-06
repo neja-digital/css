@@ -41,7 +41,9 @@
   }
 }
 
+/* .nj-card__image-wrapper needs no styles; it is a hook for consumers (e.g. aspect-ratio, overlays) */
 .nj-card__image {
+  display: block;
   width: 100%;
 }
 
@@ -56,4 +58,12 @@
 
 .nj-card__text {
   line-height: 1.5em;
+}
+
+.nj-card__cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--spacer-xs);
+  margin-top: var(--spacer-md);
 }

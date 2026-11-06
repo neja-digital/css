@@ -22,3 +22,13 @@
     resize: both;
   }
 }
+
+.nj-textarea-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacer-2xs);
+
+  label {
+    font-size: var(--text-sm);
+  }
+}

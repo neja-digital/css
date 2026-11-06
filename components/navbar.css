@@ -41,6 +41,8 @@
 }
 
 :where(.nj-navbar) {
+  /* .nj-navbar__item (the <li> around each link) needs no styles: the list reset is on .nj-navbar__links */
+
   .nj-navbar__brand {
     color: inherit;
     font-weight: 700;

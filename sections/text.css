@@ -29,3 +29,18 @@
 .nj-text-section__title {
   font-size: var(--text-3xl);
 }
+
+.nj-text-section__subtitle {
+  font-size: var(--text-xl);
+  color: var(--text-muted);
+}
+
+.nj-text-section__content {
+  font-size: var(--text-md);
+}
+
+.nj-text-section__highlights {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacer-md);
+}
