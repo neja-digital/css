@@ -10,16 +10,16 @@
   background-repeat: no-repeat;
   padding: 0 var(--spacer-md);
 
-  @media (min-width: 600px /* var(--tablet) */) {
+  @media (--tablet) {
     background-image: var(--tabletBg, var(--mobileBg));
     padding: 0 var(--spacer-xl);
   }
 
-  @media (min-width: 600px /* var(--tablet) */) and (orientation: landscape) {
+  @media (--tablet) and (orientation: landscape) {
     background-image: var(--tabletHBg, var(--tabletBg, var(--mobileBg)));
   }
 
-  @media (min-width: 1024px /* var(--desktop) */) {
+  @media (--desktop) {
     background-image: var(--desktopBg, var(--tabletBg, var(--mobileBg)));
     padding: 0 var(--spacer-3xl);
   }
@@ -61,11 +61,11 @@
   padding: var(--spacer-md);
   border-radius: var(--border-radius-medium);
 
-  @media (min-width: 600px) {
+  @media (--tablet) {
     padding: var(--spacer-xl);
   }
 
-  @media (min-width: 1024px) {
+  @media (--desktop) {
     padding: var(--spacer-3xl);
   }
 

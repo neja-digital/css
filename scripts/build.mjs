@@ -17,6 +17,8 @@ const root = resolve(import.meta.dirname, '..');
 const { code } = bundle({
   filename: resolve(root, 'index.css'),
   minify: true,
+  // Resolves the @media (--name) queries defined with @custom-media in vars/breakpoints.css
+  drafts: { customMedia: true },
   targets,
 });
 
