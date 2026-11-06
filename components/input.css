@@ -1,8 +1,19 @@
 .nj-input {
-  --control-color: var(--input-color);
+  --control-color: var(--input-color, var(--primary));
+  --control-on-color: var(--input-on-color);
   outline: none;
   border: none;
   border-radius: 0;
   padding: var(--spacer-xs) var(--spacer-md);
   font-size: var(--text-md);
+}
+
+.nj-input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacer-2xs);
+
+  label {
+    font-size: var(--text-sm);
+  }
 }

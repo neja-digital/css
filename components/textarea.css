@@ -1,5 +1,6 @@
 .nj-textarea {
-  --control-color: var(--textarea-color);
+  --control-color: var(--textarea-color, var(--primary));
+  --control-on-color: var(--textarea-on-color);
   outline: none;
   border: none;
   border-radius: 0;
@@ -20,5 +21,15 @@
 
   &.resize-both {
     resize: both;
+  }
+}
+
+.nj-textarea-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacer-2xs);
+
+  label {
+    font-size: var(--text-sm);
   }
 }

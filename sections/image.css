@@ -4,7 +4,7 @@
   gap: var(--spacer-lg);
   align-items: center;
 
-  @media (min-width: 768px /* var(--small-laptop) */) {
+  @media (--small-laptop) {
     flex-wrap: nowrap;
     gap: var(--spacer-3xl);
   }
@@ -34,8 +34,13 @@
     width: 100%;
     border-radius: var(--border-radius-medium);
 
-    @media (min-width: 768px /* var(--small-laptop) */) {
-      width: 320px;
+    @media (--small-laptop) {
+      width: 20rem;
     }
   }
+}
+
+.nj-image-section__text {
+  flex: 1;
+  min-width: 0;
 }

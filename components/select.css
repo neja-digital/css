@@ -1,5 +1,6 @@
 .nj-select {
-  --control-color: var(--select-color);
+  --control-color: var(--select-color, var(--primary));
+  --control-on-color: var(--select-on-color);
   border: none;
   border-radius: 0;
   padding: var(--spacer-xs) var(--spacer-md);
