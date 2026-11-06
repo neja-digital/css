@@ -1,5 +1,5 @@
 .nj-textarea {
-  --control-color: var(--textarea-color);
+  --control-color: var(--textarea-color, var(--primary));
   outline: none;
   border: none;
   border-radius: 0;

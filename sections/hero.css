@@ -11,16 +11,16 @@
   padding: 0 var(--spacer-md);
 
   @media (min-width: 600px /* var(--tablet) */) {
-    background-image: var(--tabletBg);
+    background-image: var(--tabletBg, var(--mobileBg));
     padding: 0 var(--spacer-xl);
   }
 
   @media (min-width: 600px /* var(--tablet) */) and (orientation: landscape) {
-    background-image: var(--tabletHBg);
+    background-image: var(--tabletHBg, var(--tabletBg, var(--mobileBg)));
   }
 
   @media (min-width: 1024px /* var(--desktop) */) {
-    background-image: var(--desktopBg);
+    background-image: var(--desktopBg, var(--tabletBg, var(--mobileBg)));
     padding: 0 var(--spacer-3xl);
   }
 
@@ -44,7 +44,7 @@
   left: 0;
   right: 0;
   z-index: 0;
-  opacity: var(--overlay-opacity);
+  opacity: var(--overlay-opacity, 0.4);
 
   &.overlay-light {
     background: rgb(255, 255, 255);
@@ -57,7 +57,7 @@
 
 .nj-hero__content {
   z-index: 1;
-  backdrop-filter: var(--content-blur);
+  backdrop-filter: var(--content-blur, none);
   padding: var(--spacer-md);
   border-radius: var(--border-radius-medium);
 

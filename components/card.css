@@ -3,7 +3,7 @@
   max-width: 420px;
   text-align: center;
   overflow: hidden;
-  background-color: var(--card-color);
+  background-color: var(--card-color, var(--surface));
 
   &.rounded-circle {
     padding: 0;

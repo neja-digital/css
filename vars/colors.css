@@ -1,0 +1,54 @@
+/*
+ * Colour tokens
+ *
+ * A theme is just a set of these variables. The block below is the light baseline; it applies to the whole page
+ * and to any subtree marked data-theme="light". Define more themes the same way, in the library or in a client's own
+ * CSS, by overriding any of the tokens under a [data-theme="name"] selector, then switch with the data-theme
+ * attribute on <html> or on any wrapper element. Tokens a theme leaves out keep the baseline value.
+ *
+ * Surfaces and text
+ *   --background        page background
+ *   --surface           panels, cards and sections that sit on the background
+ *   --surface-raised    elements stacked above a surface (menus, modals, nested cards)
+ *   --text              body text; must stay readable on all three surfaces
+ *   --text-muted        secondary text; must stay readable on all three surfaces
+ *   --border-color      dividers and control borders
+ *   --focus-ring        keyboard focus outline
+ *
+ * Brand and status fills. Each has an --on-* partner: the text/icon colour used on top of the fill.
+ *   --primary / --on-primary   --secondary / --on-secondary   --accent / --on-accent
+ *   --success / --on-success   --warning / --on-warning       --danger / --on-danger
+ */
+:root,
+[data-theme='light'] {
+  color-scheme: light;
+
+  --background: #ffffff;
+  --surface: #f6f7f9;
+  --surface-raised: #ffffff;
+  --text: #1a1d23;
+  --text-muted: #5b6270;
+  --border-color: #d5d9e0;
+  --focus-ring: #2563eb;
+
+  --primary: #2563eb;
+  --on-primary: #ffffff;
+  --secondary: #475569;
+  --on-secondary: #ffffff;
+  --accent: #b45309;
+  --on-accent: #ffffff;
+
+  --success: #15803d;
+  --on-success: #ffffff;
+  --warning: #facc15;
+  --on-warning: #1a1d23;
+  --danger: #b91c1c;
+  --on-danger: #ffffff;
+}
+
+/* Opt-in themed region: paints the theme's background and text. The whole page can be one (data-theme on <html>). */
+.nj-theme,
+[data-theme] {
+  background-color: var(--background);
+  color: var(--text);
+}

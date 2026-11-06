@@ -2,8 +2,8 @@
  * Navbar
  *
  * Customize with CSS variables on .nj-navbar (or any parent):
- *   --navbar-color                 background of the solid/light variants (set by njColor)
- *   --navbar-on-color              text color on the solid variant (default: white)
+ *   --navbar-color                 background of the solid/light variants (default: --primary; set by njColor)
+ *   --navbar-on-color              text color on the solid variant (default: --on-primary)
  *   --navbar-link-color            link color (default: inherit)
  *   --navbar-link-hover-color      link color on hover/focus (default: --navbar-link-color)
  *   --navbar-gap                   space between the navbar parts and between links
@@ -30,13 +30,13 @@
   }
 
   &.variant-solid {
-    background-color: var(--navbar-color, transparent);
-    color: var(--navbar-on-color, white);
+    background-color: var(--navbar-color, var(--primary));
+    color: var(--navbar-on-color, var(--on-primary));
   }
 
   &.variant-light {
-    background-color: color-mix(in srgb, var(--navbar-color, transparent) 25%, white 100%);
-    color: var(--navbar-color, inherit);
+    background-color: color-mix(in srgb, var(--navbar-color, var(--primary)) 25%, white 100%);
+    color: var(--navbar-color, var(--primary));
   }
 }
 
@@ -58,7 +58,7 @@
     right: 0;
     z-index: 100;
     padding: var(--spacer-md) var(--spacer-lg);
-    background-color: var(--navbar-menu-background, var(--background, white));
+    background-color: var(--navbar-menu-background, var(--background));
     color: var(--navbar-link-color, inherit);
 
     &[data-open='true'] {

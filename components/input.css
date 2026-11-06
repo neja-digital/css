@@ -1,5 +1,5 @@
 .nj-input {
-  --control-color: var(--input-color);
+  --control-color: var(--input-color, var(--primary));
   outline: none;
   border: none;
   border-radius: 0;
