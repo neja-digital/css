@@ -110,6 +110,7 @@
 }
 
 :is(.nj-button, .nj-input, .nj-select, .nj-textarea) {
+  /* color-mix() has no @supports fallback on purpose: the browser baseline (see scripts/build.mjs) all support it. */
   &.variant-solid {
     background-color: var(--control-color);
     color: color-mix(in srgb, var(--control-color) 15%, white 100%);
